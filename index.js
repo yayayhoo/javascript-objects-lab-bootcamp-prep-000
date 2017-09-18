@@ -6,7 +6,9 @@ function updateObjectWithKeyAndValue(object, key, value) {
 }
 
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  object[key] = value;
+  var copy = Object.object({}, obj);
+
+  copy[key] = value;
   return object;
 }
 
